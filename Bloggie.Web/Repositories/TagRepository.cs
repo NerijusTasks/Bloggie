@@ -33,7 +33,7 @@ namespace Bloggie.Web.Repositories
             return null;
         }
 
-        public async Task<IEnumerable<Tag>> GetALLAsync()
+        public async Task<IEnumerable<Tag>> GetAllAsync()
         {
             return await _bloggieDbContext.Tags.ToListAsync();
         }

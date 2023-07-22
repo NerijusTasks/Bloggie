@@ -41,7 +41,7 @@ namespace Bloggie.Web.Controllers
         public async Task<IActionResult> List()
         {
             // use dbContext to read the tags
-            var tags = await tagRepository.GetALLAsync();
+            var tags = await tagRepository.GetAllAsync();
 
 
             return View(tags);

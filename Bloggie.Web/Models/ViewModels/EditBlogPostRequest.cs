@@ -2,8 +2,9 @@
 
 namespace Bloggie.Web.Models.ViewModels
 {
-    public class AddBlogPostRequest
+    public class EditBlogPostRequest
     {
+        public Guid Id { get; set; }
         public string Heading { get; set; }
         public string PageTitle { get; set; }
         public string Content { get; set; }
@@ -13,7 +14,6 @@ namespace Bloggie.Web.Models.ViewModels
         public DateTime PublishedDate { get; set; }
         public string Author { get; set; }
         public bool Visible { get; set; }
-
 
         //Display tags
         public IEnumerable<SelectListItem> Tags { get; set; }
