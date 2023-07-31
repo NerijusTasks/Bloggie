@@ -11,9 +11,9 @@ namespace Bloggie.Web.Repositories
         {
             _configuration = configuration;
             account = new Account(
-                _configuration.GetSection("Cloudinary")["CloudName"],
-                _configuration.GetSection("Cloudinary")["ApiKey"],
-                _configuration.GetSection("Cloudinary")["ApiSecret"]);
+                configuration.GetSection("Cloudinary")["CloudName"],
+                configuration.GetSection("Cloudinary")["ApiKey"],
+                configuration.GetSection("Cloudinary")["ApiSecret"]);
         }
 
         public async Task<string> UploadAsync(IFormFile file)
